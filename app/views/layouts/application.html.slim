@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title
+      | Ajisai
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .notice
+      = notice
+    .alert
+      = alert
+
+    = yield
+
+
+
+    javascript:
+
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = yield :page_script

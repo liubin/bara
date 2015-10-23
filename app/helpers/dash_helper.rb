@@ -1,0 +1,2 @@
+module DashHelper
+end
