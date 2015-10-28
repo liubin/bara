@@ -1,0 +1,90 @@
+# https://raw.github.com/rails/rails/master/activesupport/lib/active_support/locale/en.yml
+zh_CN:
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "半分钟"
+      less_than_x_seconds:
+        one:   "小于 1 秒"
+        other: "小于 %{count} 秒"
+      x_seconds:
+        one:   "1 秒前"
+        other: "%{count} 秒前"
+      less_than_x_minutes:
+        one:   "小于 1 分钟"
+        other: "小于 %{count} 分钟"
+      x_minutes:
+        one:   "1 分钟"
+        other: "%{count} 分钟"
+      about_x_hours:
+        one:   "大约 1 小时"
+        other: "大约 %{count} 小时"
+      x_days:
+        one:   "1 天前"
+        other: "%{count} 天前"
+      about_x_months:
+        one:   "大约 1 个月"
+        other: "大约 %{count} 个月"
+      x_months:
+        one:   "1 个月"
+        other: "%{count} 个月"
+      about_x_years:
+        one:   "大约 1 年"
+        other: "大约 %{count} 年"
+      over_x_years:
+        one:   "1 年前"
+        other: "%{count} 年前"
+      almost_x_years:
+        one:   "最多 1 年"
+        other: "最多 %{count} 年"
+
+  #### date and time
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%Y年%m月%d日 %H点%M分%S秒"
+
+    day_names: [星期日, 星期一, 星期二, 星期三, 星期四, 星期五,星期六]
+    abbr_day_names: [星期日, 星期一, 星期二, 星期三, 星期四, 星期五,星期六]
+
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, 一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+    abbr_month_names: [~, 一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+    # Used in date_select and datetime_select.
+    order:
+      - year
+      - month
+      - day
+
+  time:
+    formats:
+      default: "%Y年%m月%d日 %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%Y年%m月%d日 %H:%M"
+    am: "AM"
+    pm: "PM"
+
+  number:
+    human:
+      storage_units:
+        format: '格式'
+        units:
+          byte: '字节'
+
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "非法数据库记录"
+    models:
+      group: '团队'
+    attributes:
+      user:
+        invitation_message: '甜言蜜语~~~'
+        email: '邮件地址'
+      group:
+        title: '名称'
+        desc: '团队说明'

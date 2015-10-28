@@ -1,0 +1,24 @@
+zh_CN:
+  devise:
+    invitations:
+      send_instructions: '邀请已发送至 %{email}。'
+      invitation_token_invalid: '邀请码不正确！'
+      updated: '密码已保存，你已经登录了。'
+      no_invitations_remaining: "没有可用邀请了。"
+      invitation_removed: '你的邀请已被删除'
+      new:
+        header: "邀请小伙伴"
+        submit_button: "邀请"
+      edit:
+        header: "设置你的密码"
+        submit_button: "设置我的密码"
+    mailer:
+      invitation_instructions:
+        subject: '来自小伙伴的邀请'
+        hello: '你好 %{email}'
+        someone_invited_you: '你的小伙伴邀请你加入 %{url} ，你可以点击下面的连接接受邀请。'
+        accept: '接受邀请'
+        ignore: "如果你不想接受这个邀请，请忽略此文件。<br />只有你点击连接并且设置了密码，才可以创建自己的账号。"
+    failure:
+      user:
+        unauthenticated: "您要访问的页面需要登录"

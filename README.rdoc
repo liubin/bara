@@ -1,28 +1,18 @@
-== README
+# Ajisai
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails project template with:
 
-Things you may want to cover:
+- [Bootstarp](http://getbootstrap.com/)
 
-* Ruby version
+- [Devise](https://github.com/plataformatec/devise)
 
-* System dependencies
+- [Pundit](https://github.com/elabs/pundit)
 
-* Configuration
+- [Sidekiq](http://sidekiq.org/)
 
-* Database creation
+# Commands
 
-* Database initialization
+## Sidekiq
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- rake sidekiq:start
+- rake sidekiq:stop

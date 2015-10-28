@@ -1,0 +1,17 @@
+zh_CN:
+  views:
+    pagination:
+      first: "&laquo; 首页"
+      last: "最后 &raquo;"
+      previous: "&lsaquo; 上一页"
+      next: "下一页 &rsaquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "没找到 %{entry_name}"
+          one: "显示 <b>1件</b> %{entry_name}"
+          other: "显示 <b>所有 %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "显示 %{entry_name} <b>%{total}</b> 中的 <b>%{first}&nbsp;-&nbsp;%{last}</b>"
