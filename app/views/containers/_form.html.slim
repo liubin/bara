@@ -1,0 +1,22 @@
+= form_for @container do |f|
+  - if @container.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@container.errors.count, "error")} prohibited this container from being saved:"
+      ul
+        - @container.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :image
+    = f.select :image, options_for_select(@images), html: {class: "form-control"}
+
+  .field
+    = f.label :name
+    = f.text_field :name, class: "form-control"
+
+  .field
+    = f.label :param
+    = f.text_area :param, class: "form-control", rows: 10
+
+
+  .actions = f.submit(class: "btn btn-success")

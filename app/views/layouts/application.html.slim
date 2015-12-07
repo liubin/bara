@@ -2,16 +2,82 @@ doctype html
 html
   head
     title
-      | Ajisai
+      | Bara
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    .notice
-      = notice
-    .alert
-      = alert
 
-    = yield
+    nav class="navbar navbar-default navbar-fixed-top"
+      .container
+        .navbar-header
+          button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"
+            span.sr-only
+              | Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+
+          a class="navbar-brand" href="#"
+            | Bara
+
+        #navbar.navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.active
+              a href="#"
+                | Home
+            li
+              a href="/containers"
+                | 容器
+            li
+              a href="/templates"
+                | Nginx模板
+            li
+              a href="/nginx/show"
+                | Nginx
+
+
+            li.dropdown
+              a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                | 快捷方式 
+                span.caret
+
+              ul.dropdown-menu
+                li
+                  = link_to '启动容器', new_container_path
+                li
+                  = link_to '创建Nginx模板', new_template_path
+
+                li.divider role="separator"
+                li.dropdown-header
+                  | Nginx操作
+                li
+                  = link_to '生成配置文件', nginx_generate_path, method: 'post'
+                li
+                  = link_to '重启Nginx', nginx_reload_path, method: 'post'
+
+
+          #navbar.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+              li.dropdown
+                a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                  = current_user.name
+                  span.caret
+                ul.dropdown-menu
+                  li
+                    a[href="/profile"]
+                      | 个人信息
+                  li role="separator" class="divider"
+                  li
+                    = link_to "退出登录", destroy_user_session_path, method: 'delete'
+
+
+    .container
+      .notice
+        = notice
+      .alert
+        = alert
+
+      = yield
 
 
 

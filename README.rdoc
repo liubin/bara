@@ -1,18 +1,32 @@
-# Ajisai
+# Bara
 
-Rails project template with:
+Simply Docker base multi version app test environment.
 
-- [Bootstarp](http://getbootstrap.com/)
 
-- [Devise](https://github.com/plataformatec/devise)
+**It's only a reference implementation, strongly embedded in our process. **
 
-- [Pundit](https://github.com/elabs/pundit)
+# How to run
 
-- [Sidekiq](http://sidekiq.org/)
+## Configuration files
 
-# Commands
+### Docker Daemon
 
-## Sidekiq
+Edit `config/initializers/docker.rb`
 
-- rake sidekiq:start
-- rake sidekiq:stop
+### Nginx Server
+
+Edit `config/initializers/nginx.rb`
+
+
+### Create Nginx Configuration's template
+
+Login and go to `/templates/new` to create template file. In the `nginx.conf` file, you kan use placeholder `{{upstream}}`, this will be substituted by running containers info.
+
+
+# Issues or Questions
+
+please create issue in GitHub.
+
+# Author
+
+Bin Liu <liubin0329@gmail.com>

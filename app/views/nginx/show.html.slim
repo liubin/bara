@@ -1,0 +1,9 @@
+= link_to '生成配置文件', nginx_generate_path, method: 'post', class: 'btn btn-success'
+
+= link_to '编辑配置文件', nginx_edit_path, class: 'btn btn-success'
+
+= link_to '重启Nginx', nginx_reload_path, method: 'post', class: 'btn btn-danger'
+
+pre
+  = @conf
+

@@ -1,5 +1,26 @@
 Rails.application.routes.draw do
+
+  resources :templates do
+    member do
+      post 'active'
+    end
+  end
+
+  resources :containers do
+    member do
+      post 'start'
+      post 'stop'
+    end
+  end
+
   get 'dash/index'
+
+  get 'nginx/show'
+  get 'nginx/edit'
+  get 'nginx/edit_template'
+  post 'nginx/reload'
+  post 'nginx/update'
+  post 'nginx/generate'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
@@ -7,7 +28,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root to: "dash#index"
+  root to: "containers#index"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

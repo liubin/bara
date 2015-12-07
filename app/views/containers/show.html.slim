@@ -1,0 +1,25 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @container.name
+p
+  strong Cid:
+  = @container.cid
+p
+  strong User:
+  = @container.user_id
+p
+  strong Json:
+  pre
+    code.json
+      = @container.json
+
+
+= link_to 'Edit', edit_container_path(@container)
+'|
+= link_to 'Back', containers_path
+
+= content_for :page_script
+  javascript:
+    hljs.initHighlightingOnLoad();

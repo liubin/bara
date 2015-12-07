@@ -10,7 +10,7 @@ class AjisaiMarkdowner
 
   def self.md(str)
     return '' if str.blank?
-    markdown = Redcarpet::Markdown.new(TWMarkdown, {
+    markdown = Redcarpet::Markdown.new(AjisaiMarkdown, {
         autolink: true,
         fenced_code_blocks: true,
         strikethrough: true,

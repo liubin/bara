@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022095754) do
+ActiveRecord::Schema.define(version: 20151207132651) do
+
+  create_table "containers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "image"
+    t.string   "cid"
+    t.integer  "user_id"
+    t.string   "param"
+    t.string   "json"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "containers", ["cid"], name: "index_containers_on_cid", unique: true
+
+  create_table "templates", force: :cascade do |t|
+    t.string   "name"
+    t.string   "body"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "active_flg"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -41,6 +63,7 @@ ActiveRecord::Schema.define(version: 20151022095754) do
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
     t.integer  "invitations_count",      default: 0
+    t.string   "name"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

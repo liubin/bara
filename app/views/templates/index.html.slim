@@ -1,0 +1,31 @@
+h1 Listing templates
+
+table.table.table-striped
+  thead
+    tr
+      th
+      th Name
+      th User
+      th
+      th
+      th
+
+  tbody
+    - @templates.each do |template|
+      tr
+        td
+          - if template.is_active?
+            span.label.label-success
+              | Active
+        td = template.name
+        td = template.user.name
+        td
+          - if not template.is_active?
+            = link_to 'Active', active_template_path(template), :method => :post
+        td = link_to 'Show', template
+        td = link_to 'Edit', edit_template_path(template)
+        td = link_to 'Destroy', template, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Template', new_template_path
