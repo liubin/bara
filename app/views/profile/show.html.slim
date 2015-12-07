@@ -1,0 +1,10 @@
+h2 个人信息
+
+
+p
+  span
+    | 姓名：
+  span
+    = current_user.name
+
+= link_to '修改', profile_edit_path, :class => 'btn btn-success'

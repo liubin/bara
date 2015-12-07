@@ -1,0 +1,11 @@
+h2 修改个人信息
+
+= form_tag(profile_update_path) do
+
+  .field
+    = label_tag :name
+    = text_field_tag :name, current_user.name, class: "form-control"
+
+
+  = submit_tag '保存', class: "form-control btn btn-success"
+
