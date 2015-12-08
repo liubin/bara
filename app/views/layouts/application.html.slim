@@ -2,7 +2,7 @@ doctype html
 html
   head
     title
-      | Bara
+      | バラ
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
@@ -18,7 +18,7 @@ html
             span.icon-bar
 
           a class="navbar-brand" href="#"
-            | Bara
+            | バラ
 
         #navbar.navbar-collapse.collapse
           ul.nav.navbar-nav
@@ -72,6 +72,12 @@ html
 
       = yield
 
+
+    footer.footer
+      .container
+        p.text-muted
+          | Source: 
+          = link_to 'GitHub', 'https://github.com/liubin/bara'
 
 
     javascript:
