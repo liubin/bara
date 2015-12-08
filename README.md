@@ -7,6 +7,8 @@ Simply Docker base multi version app test environment.
 
 # How to run
 
+[简体中文版使用说明](http://liubin.org/2015/12/08/bara-nginx-and-dokcer-based-test-env-poc/)
+
 ## Configuration files
 
 ### Docker Daemon
