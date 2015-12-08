@@ -68,23 +68,4 @@ zh_CN:
     am: "AM"
     pm: "PM"
 
-  number:
-    human:
-      storage_units:
-        format: '格式'
-        units:
-          byte: '字节'
 
-  activerecord:
-    errors:
-      messages:
-        record_invalid: "非法数据库记录"
-    models:
-      group: '团队'
-    attributes:
-      user:
-        invitation_message: '甜言蜜语~~~'
-        email: '邮件地址'
-      group:
-        title: '名称'
-        desc: '团队说明'

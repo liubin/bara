@@ -1,0 +1,10 @@
+h2 拉取镜像
+
+= form_tag(images_pull_path) do
+
+  .field
+    = label_tag :name
+    = text_field_tag :name,'', class: "form-control"
+
+  = submit_tag '拉取', class: "form-control btn btn-success"
+

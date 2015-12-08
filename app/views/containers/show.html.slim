@@ -1,25 +1,21 @@
-p#notice = notice
+h2 容器详情
+
+= link_to '返回', containers_path, :class => 'btn btn-warning'
 
 p
-  strong Name:
+  strong 容器名称:
   = @container.name
 p
-  strong Cid:
+  strong 容器ID:
   = @container.cid
 p
-  strong User:
-  = @container.user_id
+  strong 创建者:
+  = @container.user.name
 p
-  strong Json:
-  pre
-    code.json
-      = @container.json
+  strong Json数据:
+  = (ap @container).html_safe
 
 
-= link_to 'Edit', edit_container_path(@container)
-'|
-= link_to 'Back', containers_path
+= link_to '返回', containers_path, :class => 'btn btn-warning'
 
-= content_for :page_script
-  javascript:
-    hljs.initHighlightingOnLoad();
+

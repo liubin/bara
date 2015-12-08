@@ -1,5 +1,4 @@
-h1 Listing containers
-
+h2 容器列表
 
 table.table.table-striped style="table-layout:fixed; word-break:break-all;"
   thead
@@ -15,28 +14,25 @@ table.table.table-striped style="table-layout:fixed; word-break:break-all;"
     - @containers.each do |container|
       tr
         td
-          = container.name
+          = link_to container.name, container
           - if container.json == 'running'
             span.label.label-success
               | 运行中
 
         td width='100px;'
-          = container.cid
+          = link_to container.cid, container
         td = container.image
         td width='300px;'
           = container.param
         td = container.user.name
-        td 
-          = link_to '查看', container
-          = link_to '设为默认', edit_container_path(container)
-
+        td
           - if container.json == 'running'
             = link_to '停止', stop_container_path(container), data: {:confirm => 'Are you sure?'}, :method => :POST, :class => 'btn btn-warning'
           -else
-            = link_to '启动', start_container_path(container), data: {:confirm => 'Are you sure?'}, :method => :POST, :class => 'btn btn-primary'
+            = link_to '启动', start_container_path(container), data: {:confirm => 'Are you sure?'}, :method => :POST, :class => 'btn btn-success'
             = link_to '删除', container, data: {:confirm => 'Are you sure?'}, :method => :delete, :class => 'btn btn-danger'
 
 
 br
 
-= link_to 'New Container', new_container_path, class: 'btn btn-primary'
+= link_to '启动新容器', new_container_path, class: 'btn btn-success'

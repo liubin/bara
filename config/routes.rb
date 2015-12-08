@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'images' => 'images#index'
+  get 'images/add'
+  post 'images/pull'
+  delete 'images/:id' => 'images#delete', as: 'delete_image'
+  get 'images/:id' => 'images#show', as: 'image'
+
   resources :templates do
     member do
       post 'active'
@@ -15,7 +21,7 @@ Rails.application.routes.draw do
 
   get 'dash/index'
 
-  get 'nginx/show'
+  get 'nginx' => 'nginx#show'
   get 'nginx/edit'
   get 'nginx/edit_template'
   post 'nginx/reload'

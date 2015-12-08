@@ -1,5 +1,3 @@
-require 'ajisai_markdown'
-
 class ContainersController < ApplicationController
   before_action :set_container, only: [:show, :edit, :update, :destroy, :start, :stop]
   before_action :init_images, only: [:new, :edit]
@@ -27,7 +25,7 @@ class ContainersController < ApplicationController
   # GET /containers/1
   # GET /containers/1.json
   def show
-    @container.json = Docker::Container.get(@container.cid).json['State']
+    @container.json = Docker::Container.get(@container.cid)
   end
 
   # GET /containers/new
@@ -106,8 +104,6 @@ class ContainersController < ApplicationController
       params.require(:container).permit(:name, :image, :param)
     end
     def init_images
-      @images = (Docker::Image.all.select! do |i|
-        i.info['RepoTags'][0] != '<none>:<none>'
-      end || []).map! {|i| i.info['RepoTags'][0]}
+      @images = (Docker::Image.all || []).map {|i| i.info['RepoTags'][0]}
     end
 end

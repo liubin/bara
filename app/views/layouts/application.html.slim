@@ -22,19 +22,10 @@ html
 
         #navbar.navbar-collapse.collapse
           ul.nav.navbar-nav
-            li.active
-              a href="#"
-                | Home
-            li
-              a href="/containers"
-                | 容器
-            li
-              a href="/templates"
-                | Nginx模板
-            li
-              a href="/nginx/show"
-                | Nginx
-
+            = menu_item('容器', '/containers')
+            = menu_item('镜像', '/images')
+            = menu_item('Nginx服务', '/nginx')
+            = menu_item('Nginx模板', '/templates')
 
             li.dropdown
               a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
@@ -44,6 +35,8 @@ html
               ul.dropdown-menu
                 li
                   = link_to '启动容器', new_container_path
+                li
+                  = link_to '拉取镜像', images_add_path
                 li
                   = link_to '创建Nginx模板', new_template_path
 
