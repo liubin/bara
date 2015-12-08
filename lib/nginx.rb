@@ -43,22 +43,22 @@ module Nginx
 
     bs.each do |p|
       ps = <<PS
-  upstream backend_#{p}
+  upstream backend_#{p[0]}
   {
-    server localhost:#{p};
+    server localhost:#{p[1]};
   }
 PS
       bss.push ps
     end
 
     ## map
-    bss.push '  map $http_vvv, $u{'
+    bss.push '  map $http_v, $u{'
 
     bs.each do |p|
-      bss.push "    ~#{p} #{p};"
+      bss.push "    ~#{p[0]} #{p[0]};"
     end
 
-    bss.push "    default #{bs.last};"
+    bss.push "    default #{bs.last[0]};"
 
     bss.push '  }'
     bss.join("\n")
@@ -70,7 +70,7 @@ PS
       # "Ports": [{"PrivatePort": 2222, "PublicPort": 3333, "Type": "tcp"}]
       if container.info['Ports'] and container.info['Ports'].size > 0
         p = container.info['Ports'][0]['PublicPort']
-        backends.push p
+        backends.push [container.info['Names'][0].gsub('/', ''), p]
       end
     end
     backends
