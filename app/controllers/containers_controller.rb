@@ -50,9 +50,7 @@ class ContainersController < ApplicationController
     c = Docker::Container.create(
       'Image' => @container.image,
       'Cmd' => container_params,
-      'ExposedPorts' => {
-        '8080/tcp' => {}
-      },
+      'PublishAllPorts' => true,
       'name' => @container.name
     )
 
