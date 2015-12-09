@@ -30,7 +30,10 @@ zh_CN:
   user:
     logout: '退出登录'
     profile:
+      name: '用户名'
       title: '个人信息'
+      action:
+        edit: '编辑个人信息'
 
   nginx:
     menu:

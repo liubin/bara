@@ -1,10 +1,10 @@
-h2 t('user.profle')
+h2 = t('user.profile.title')
 
 
 p
   span
-    | t('user.profle.name')：
+    = t('user.profile.name')
   span
     = current_user.name
 
-= link_to t('edit'), profile_edit_path, :class => 'btn btn-success'
+= link_to t('user.profile.action.edit'), profile_edit_path, :class => 'btn btn-success'

@@ -1,9 +1,9 @@
-h2 t('user.profile.edit')
+h2 = t('user.profile.action.edit')
 
 = form_tag(profile_update_path) do
 
   .field
-    = label_tag :name
+    = label_tag t('user.profile.name')
     = text_field_tag :name, current_user.name, class: "form-control"
 
 

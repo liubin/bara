@@ -29,7 +29,10 @@ ja:
   user:
     logout: 'ログアウト'
     profile:
+      name: '名前'
       title: 'プロフィール'
+      action:
+        edit: 'プロフィールを編集'
 
   nginx:
     menu:

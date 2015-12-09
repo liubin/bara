@@ -44,7 +44,10 @@ en:
   user:
     logout: 'Logout'
     profile:
+      name: 'User Name'
       title: 'Profile'
+      action:
+        edit: 'Edit Profile'
 
   nginx:
     menu:
