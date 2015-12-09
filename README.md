@@ -29,6 +29,6 @@ Login and go to `/templates/new` to create template file. In the `nginx.conf` fi
 
 please create issue in GitHub.
 
-# Author
+# Author & Licensing
 
-Bin Liu <liubin0329@gmail.com>
+The MIT License (MIT), Copyright 2015 Bin Liu <liubin0329@gmail.com>
