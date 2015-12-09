@@ -1,5 +1,5 @@
 class TemplatesController < ApplicationController
-  before_action :set_template, only: [:show, :edit, :update, :destroy, :active]
+  before_action :set_template, only: [:show, :edit, :destroy, :active]
 
 
   def active
@@ -56,6 +56,10 @@ class TemplatesController < ApplicationController
     if(template_params[:active_flg] == Template::ACTIVE_FLG[:ACTIVE].to_s)
       Template.clear_all_active_flg
     end
+
+    # get template record. If the old active flg is 1,
+    # it will not be updated if use @template created in :before_action
+    @template = Template.find(params[:id])
 
     respond_to do |format|
       if @template.update(template_params)
