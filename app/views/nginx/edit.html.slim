@@ -1,3 +1,5 @@
+= render 'nginx_menu'
+
 = form_tag(nginx_update_path) do
   p
     = text_area_tag :body, @body, class: "form-control", rows: 25

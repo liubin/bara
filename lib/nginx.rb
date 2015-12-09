@@ -58,7 +58,7 @@ PS
       bss.push "    ~#{p[0]} #{p[0]};"
     end
 
-    bss.push "    default #{bs.last[0]};"
+    bss.push("    default #{bs.last[0]};") if not bs.empty?
 
     bss.push '  }'
     bss.join("\n")
