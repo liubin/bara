@@ -1,4 +1,4 @@
-h2 修改个人信息
+h2 t('user.profile.edit')
 
 = form_tag(profile_update_path) do
 
@@ -7,5 +7,5 @@ h2 修改个人信息
     = text_field_tag :name, current_user.name, class: "form-control"
 
 
-  = submit_tag '保存', class: "form-control btn btn-success"
+  = submit_tag t('save'), class: "form-control btn btn-success"
 

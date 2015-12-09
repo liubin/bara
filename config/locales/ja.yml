@@ -1,0 +1,94 @@
+# https://raw.github.com/rails/rails/master/activesupport/lib/active_support/locale/en.yml
+ja:
+  bara: 'バラ'
+  menu:
+    shortcut: 'ショートカット'
+
+  helpers:
+    submit:
+      create: "%{model}を作成"
+      submit: "%{model}を保存"
+      update: "%{model}を更新"
+
+  activerecord:
+    models:
+      container: 'コンテナ'
+      template: 'Nginx設定ファイルテンプレート'
+    attributes:
+      template:
+        name: 'テンプレート名'
+        body: 'テンプレート内容'
+      container:
+        image: "イメージ"
+        name: "コンテナ名"
+        param: "コンテナ启动参数"
+
+  back: '戻り'
+  save: '保存'
+
+  user:
+    logout: 'ログアウト'
+    profile:
+      title: 'プロフィール'
+
+  nginx:
+    menu:
+      operations: 'Nginx操作'
+    service:
+      conf:
+        generate: '設定ファイルを作成'
+        edit: '設定ファイルを編集'
+      title: 'Nginxサービス'
+      reload: 'Nginxを再起動'
+
+    template:
+      title: 'Nginx設定ファイルテンプレート'
+      list: 'テンプレートリスト'
+      detail:
+        name: 'テンプレート名'
+        creator: 'クリエイター'
+        created: '作成日時'
+        active_flg: 'デフォルト?'
+
+      action:
+        new: 'テンプレートを作成'
+        edit: 'テンプレートを編集'
+        show: 'テンプレート詳細'
+        remove: 'テンプレートを削除'
+        active: 'デフォルトにする'
+
+  image:
+    title: 'イメージ'
+    list: 'イメージ列表'
+    action:
+      pull: 'イメージをプル'
+      remove: 'イメージを削除'
+    detail:
+      title: 'イメージ详情'
+      name: 'イメージ名'
+      id: 'イメージid'
+      size: 'イメージ大小'
+      created: '作成日時'
+
+
+  container:
+    title: 'コンテナ'
+    list: 'コンテナ列表'
+    detail:
+      title: 'コンテナ详情'
+      param: '启动参数'
+      name: 'コンテナ名'
+      id: 'コンテナid'
+      image: 'イメージ'
+      creator: 'クリエイター'
+      meta: '情報'
+
+    state:
+      running: '動作中'
+    action:
+      stop: '停止'
+      start: '起動'
+      remove: '削除'
+      deploy: 'コンテナをデプロイ'
+
+

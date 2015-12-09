@@ -1,14 +1,14 @@
-h2 镜像列表
+h2 = t('image.list')
 
-= link_to '拉取镜像', images_add_path, class: 'btn btn-success'
+= link_to t('image.action.pull'), images_add_path, class: 'btn btn-success'
 
 table.table.table-striped style="table-layout:fixed; word-break:break-all;"
   thead
     tr
-      th Name
-      th Id
-      th Size
-      th Created
+      th =t('image.detail.name')
+      th =t('image.detail.id')
+      th =t('image.detail.size')
+      th =t('image.detail.created')
       th
 
   tbody
@@ -21,4 +21,4 @@ table.table.table-striped style="table-layout:fixed; word-break:break-all;"
         td = number_to_human_size(image.info['VirtualSize'], precision: 3)
         td = Time.at(image.info['Created'])
         td
-          = link_to '删除', delete_image_path(image.info['id']), data: {:confirm => 'Are you sure?'}, :method => :delete, :class => 'btn btn-danger'
+          = link_to t('image.action.remove'), delete_image_path(image.info['id']), data: {:confirm => 'Are you sure?'}, :method => :delete, :class => 'btn btn-danger'

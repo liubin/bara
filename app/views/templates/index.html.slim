@@ -1,11 +1,15 @@
-h1 Listing templates
+h1 = t('nginx.template.list')
+
+= link_to t('nginx.template.action.new'), new_template_path, class: 'btn btn-success'
+
 
 table.table.table-striped
   thead
     tr
       th
-      th Name
-      th User
+      th = t('nginx.template.detail.name')
+      th = t('nginx.template.detail.creator')
+      th = t('nginx.template.detail.created')
       th
       th
       th
@@ -19,13 +23,11 @@ table.table.table-striped
               | Active
         td = template.name
         td = template.user.name
+        td = template.created_at
         td
           - if not template.is_active?
-            = link_to 'Active', active_template_path(template), :method => :post
-        td = link_to 'Show', template
-        td = link_to 'Edit', edit_template_path(template)
-        td = link_to 'Destroy', template, data: {:confirm => 'Are you sure?'}, :method => :delete
+            = link_to t('nginx.template.action.active'), active_template_path(template), :method => :post, class: 'btn btn-warning'
+        td = link_to t('nginx.template.action.show'), template, class: 'btn btn-success'
+        td = link_to t('nginx.template.action.edit'), edit_template_path(template), class: 'btn btn-success'
+        td = link_to t('nginx.template.action.remove'), template, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
 
-br
-
-= link_to 'New Template', new_template_path

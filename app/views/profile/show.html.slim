@@ -1,10 +1,10 @@
-h2 个人信息
+h2 t('user.profle')
 
 
 p
   span
-    | 姓名：
+    | t('user.profle.name')：
   span
     = current_user.name
 
-= link_to '修改', profile_edit_path, :class => 'btn btn-success'
+= link_to t('edit'), profile_edit_path, :class => 'btn btn-success'

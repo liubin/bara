@@ -1,21 +1,21 @@
-h2 容器详情
+h2 = t('container.detail.title')
 
-= link_to '返回', containers_path, :class => 'btn btn-warning'
+= link_to t('back'), containers_path, :class => 'btn btn-warning'
 
 p
-  strong 容器名称:
+  strong = t('container.detail.name')
   = @container.name
 p
-  strong 容器ID:
+  strong = t('container.detail.id')
   = @container.cid
 p
-  strong 创建者:
+  strong = t('container.detail.creator')
   = @container.user.name
 p
-  strong Json数据:
+  strong = t('container.detail.meta')
   = (ap @container).html_safe
 
 
-= link_to '返回', containers_path, :class => 'btn btn-warning'
+= link_to t('back'), containers_path, :class => 'btn btn-warning'
 
 

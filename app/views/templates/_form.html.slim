@@ -17,7 +17,7 @@
     .form-group.checkbox
       label
         = f.check_box(:active_flg, {}, 1, 0)
-        | Active
+        = t('nginx.template.detail.active_flg')
 
 
   .actions = f.submit(class: "btn btn-success")

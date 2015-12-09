@@ -20,4 +20,88 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  bara: 'bara'
+
+  menu:
+    shortcut: 'Shortcut'
+
+  activerecord:
+    models:
+      container: 'Container'
+      template: 'Nginx Template'
+    attributes:
+      template:
+        name: 'Template Name'
+        body: 'Template Content'
+      container:
+        image: "Image Name"
+        name: "Container Name"
+        param: "Startup Params"
+
+  back: 'Back'
+  save: 'Save'
+
+  user:
+    logout: 'Logout'
+    profile:
+      title: 'Profile'
+
+  nginx:
+    menu:
+      operations: 'Nginx'
+    service:
+      conf:
+        generate: 'Create Config File'
+        edit: 'Edit Config File'
+      title: 'Nginx Service'
+      reload: 'Reload Nginx Service'
+
+    template:
+      title: 'Nginx Config Template'
+      list: 'Template List'
+      detail:
+        name: 'Template Name'
+        creator: 'Creator'
+        created: 'Created'
+        active_flg: 'Default?'
+
+      action:
+        new: 'New Template'
+        edit: 'Edit Template'
+        show: 'Template Details'
+        remove: 'Remove Template'
+        active: 'Set Default'
+
+  image:
+    title: 'Image'
+    list: 'Image List'
+    action:
+      pull: 'Pull'
+      remove: 'Remove Image'
+    detail:
+      title: 'Image Details'
+      name: 'Image Name'
+      id: 'Image ID'
+      size: 'Image Size'
+      created: 'Created'
+
+
+  container:
+    title: 'Container'
+    list: 'Container List'
+    detail:
+      title: 'Container Details'
+      param: 'Startup Params'
+      name: 'Container Name'
+      id: 'ID'
+      image: 'Image'
+      creator: 'Creator'
+      meta: 'Meta'
+
+    state:
+      running: 'Running'
+    action:
+      stop: 'Stop'
+      start: 'Start'
+      remove: 'Remove'
+      deploy: 'Deploy'

@@ -1,15 +1,20 @@
 p#notice = notice
 
 p
-  strong Name:
+  strong = t('nginx.template.detail.name')
   = @template.name
 p
-  strong Body:
-  = @template.body
+  strong = t('nginx.template.detail.body')
+  pre
+    = @template.body
 p
-  strong User:
-  = @template.user_id
+  strong = t('nginx.template.detail.creator')
+  = @template.user.name
 
-= link_to 'Edit', edit_template_path(@template)
-'|
-= link_to 'Back', templates_path
+p
+  strong = t('nginx.template.detail.created')
+  = @template.created_at
+
+= link_to t('nginx.template.action.edit'), edit_template_path(@template), class: 'btn btn-success'
+
+= link_to t('back'), templates_path, class: 'btn btn-success'

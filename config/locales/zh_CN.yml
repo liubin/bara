@@ -1,5 +1,96 @@
 # https://raw.github.com/rails/rails/master/activesupport/lib/active_support/locale/en.yml
 zh_CN:
+  bara: 'バラ'
+
+  menu:
+    shortcut: '快捷方式'
+
+  helpers:
+    submit:
+      create: "创建 %{model}"
+      submit: "保存 %{model}"
+      update: "更新 %{model}"
+
+  activerecord:
+    models:
+      container: '容器'
+      template: 'Nginx配置文件模板'
+    attributes:
+      template:
+        name: '模板名称'
+        body: '模板内容'
+      container:
+        image: "镜像"
+        name: "容器名"
+        param: "容器启动参数"
+
+  back: '返回'
+  save: '保存'
+
+  user:
+    logout: '退出登录'
+    profile:
+      title: '个人信息'
+
+  nginx:
+    menu:
+      operations: 'Nginx操作'
+    service:
+      conf:
+        generate: '生成配置文件'
+        edit: '在线编辑配置文件'
+      title: 'Nginx服务'
+      reload: '重启Nginx服务'
+
+    template:
+      title: 'Nginx配置文件模板'
+      list: '模板列表'
+      detail:
+        name: '模板名'
+        creator: '创建者'
+        created: '创建时间'
+        active_flg: '是否 Active ?'
+
+      action:
+        new: '新建模板'
+        edit: '编辑模板'
+        show: '查看模板'
+        remove: '删除模板'
+        active: '设为 Active'
+
+  image:
+    title: '镜像'
+    list: '镜像列表'
+    action:
+      pull: '拉取'
+      remove: '删除镜像'
+    detail:
+      title: '镜像详情'
+      name: '镜像名'
+      id: '镜像id'
+      size: '镜像大小'
+      created: '创建时间'
+
+
+  container:
+    title: '容器'
+    list: '容器列表'
+    detail:
+      title: '容器详情'
+      param: '启动参数'
+      name: '容器名'
+      id: '容器id'
+      image: '镜像'
+      creator: '创建者'
+      meta: '元数据'
+
+    state:
+      running: '运行中'
+    action:
+      stop: '停止'
+      start: '启动'
+      remove: '删除'
+      deploy: '部署'
 
   datetime:
     distance_in_words:

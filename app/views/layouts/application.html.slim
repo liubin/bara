@@ -2,7 +2,7 @@ doctype html
 html
   head
     title
-      | バラ
+      = "#{t('bara')} - Docker and Nginx based test environment"
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
@@ -18,35 +18,35 @@ html
             span.icon-bar
 
           a class="navbar-brand" href="#"
-            | バラ
+            = t('bara')
 
         #navbar.navbar-collapse.collapse
           ul.nav.navbar-nav
-            = menu_item('容器', '/containers')
-            = menu_item('镜像', '/images')
-            = menu_item('Nginx服务', '/nginx')
-            = menu_item('Nginx模板', '/templates')
+            = menu_item(t('container.title'), '/containers')
+            = menu_item(t('image.title'), '/images')
+            = menu_item(t('nginx.service.title'), '/nginx')
+            = menu_item(t('nginx.template.title'), '/templates')
 
             li.dropdown
               a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
-                | 快捷方式 
+                = t('menu.shortcut')
                 span.caret
 
               ul.dropdown-menu
                 li
-                  = link_to '启动容器', new_container_path
+                  = link_to t('container.action.deploy'), new_container_path
                 li
-                  = link_to '拉取镜像', images_add_path
+                  = link_to t('image.action.pull'), images_add_path
                 li
-                  = link_to '创建Nginx模板', new_template_path
+                  = link_to t('nginx.template.action.new'), new_template_path
 
                 li.divider role="separator"
                 li.dropdown-header
-                  | Nginx操作
+                  = t('nginx.menu.operations')
                 li
-                  = link_to '生成配置文件', nginx_generate_path, method: 'post'
+                  = link_to t('nginx.service.conf.generate'), nginx_generate_path, method: 'post'
                 li
-                  = link_to '重启Nginx', nginx_reload_path, method: 'post'
+                  = link_to t('nginx.service.reload'), nginx_reload_path, method: 'post'
 
 
           #navbar.collapse.navbar-collapse
@@ -58,10 +58,10 @@ html
                 ul.dropdown-menu
                   li
                     a[href="/profile"]
-                      | 个人信息
+                      = t 'user.profile.title'
                   li role="separator" class="divider"
                   li
-                    = link_to "退出登录", destroy_user_session_path, method: 'delete'
+                    = link_to t('user.logout'), destroy_user_session_path, method: 'delete'
 
 
     .container
