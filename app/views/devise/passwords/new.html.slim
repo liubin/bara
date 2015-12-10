@@ -1,11 +1,11 @@
 h2
-  | Forgot your password?
+  = t('devise.label.password_lost')
 = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
   = devise_error_messages!
   .field
-    = f.label :email
+    = f.label t('devise.label.email')
     br
     = f.email_field :email, autofocus: true
   .actions
-    = f.submit "Send me reset password instructions"
+    = f.submit t('devise.label.password_lost'), class: 'btn btn-success'
 = render "devise/shared/links"

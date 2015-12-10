@@ -59,16 +59,26 @@ html
                   li
                     a[href="/profile"]
                       = t 'user.profile.title'
+                  li
+                    = link_to t('devise.label.change_password'), edit_user_registration_path
                   li role="separator" class="divider"
                   li
                     = link_to t('user.logout'), destroy_user_session_path, method: 'delete'
 
 
     .container
-      .notice
-        = notice
-      .alert
-        = alert
+      - if notice
+        .alert.alert-info.alert-dismissible
+          button.close data-dismiss="alert" aria-label="Close"
+            span aria-hidden="true"
+              | &times;
+          = notice
+      - if alert
+        .alert.alert-warning.alert-dismissible
+          button.close data-dismiss="alert" aria-label="Close"
+            span aria-hidden="true"
+              | &times;
+          = alert
 
       = yield
 

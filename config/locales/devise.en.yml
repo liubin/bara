@@ -1,7 +1,32 @@
 # Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 
 en:
+
   devise:
+    label:
+      login: 'Log in'
+      email: 'Email'
+      edit: 'Edit profile'
+      save: 'Save'
+      password: 'Password'
+      password_confirmation: 'Confirm new password'
+      need_confirm_password: '(we need your current password to confirm your changes)'
+      leave_blank: "(leave blank if you don't want to change it)"
+      current_password: 'Current password'
+      minimum_password_length: "(%{length} characters minimum)"
+      remember_me: 'Remember me'
+      signup: 'Sign up'
+      unhappy: 'Unhappy?'
+      delete_account: 'Delete account'
+      password_lost: 'Forgot your password?'
+      change_password: 'Change your password'
+      new_password: 'New password'
+      confirm_mail_not_received: "Didn't receive confirmation instructions?"
+      unlock_mail_not_received: "Didn't receive unlock instructions?"
+      signin_with_provider: "Sign in with %{kind}"
+      resend_confirmation_instructions: 'Resend confirmation instructions'
+      resend_unlock_instructions: 'Resend unlock instructions'
+
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."

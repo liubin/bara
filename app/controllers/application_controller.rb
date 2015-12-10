@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :authenticate_user!
+  before_action :check_user_name
 
   # Ensuring policies are used
   # after_action :verify_authorized, :except => :index
@@ -13,6 +14,11 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   private
+
+  def check_user_name
+    return if controller_name = 'profile' && (action_name == 'edit' || action_name == 'update')
+    redirect_to(profile_edit_path) if current_user.name.blank?
+  end
 
   def user_not_authorized
     flash[:alert] = "You are not authorized to perform this action."

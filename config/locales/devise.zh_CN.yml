@@ -3,7 +3,47 @@
 # https://gist.github.com/Kenrick-Zhou/7909822
 
 zh_CN:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "请输入Email"
+              taken: 'Email已经被使用'
+            password:
+              blank: "请输入密码"
+              too_short: '密码太短'
+            password_confirmation:
+              confirmation: '两次输入密码不一致'
+            current_password:
+              blank: '请输入当前密码'
+
   devise:
+    label:
+      login: '登录'
+      email: 'Email'
+      edit: '修改个人信息'
+      save: '保存'
+      password: '密码'
+      password_confirmation: '密码确认'
+      need_confirm_password: '（需要确认密码）'
+      leave_blank: '（不修改密码的话留空）'
+      current_password: '当前密码'
+      minimum_password_length: "（长度小于%{length}）"
+      remember_me: '自动登录'
+      signup: '注册'
+      unhappy: '不爽？'
+      delete_account: '删除账号'
+      password_lost: '忘记密码'
+      change_password: '修改密码'
+      new_password: '新密码'
+      confirm_mail_not_received: '没有收到确认邮件'
+      unlock_mail_not_received: '没有收到解锁邮件'
+      signin_with_provider: "%{kind} アカウントによる認証"
+      resend_confirmation_instructions: '再次发送确认邮件'
+      resend_unlock_instructions: '再次发送解锁邮件'
+
     confirmations:
       confirmed: "您的帐号已经确认，您现在已登录。"
       send_instructions: "几分钟后，您将收到确认帐号的电子邮件。"
