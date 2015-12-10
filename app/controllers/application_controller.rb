@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   private
 
   def check_user_name
+    return if current_user.nil?
     return if controller_name = 'profile' && (action_name == 'edit' || action_name == 'update')
     redirect_to(profile_edit_path) if current_user.name.blank?
   end
