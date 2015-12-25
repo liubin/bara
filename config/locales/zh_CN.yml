@@ -94,6 +94,7 @@ zh_CN:
       start: '启动'
       remove: '删除'
       deploy: '部署'
+      logs: 'logs'
 
   datetime:
     distance_in_words:
