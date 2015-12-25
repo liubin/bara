@@ -1,5 +1,5 @@
 class ContainersController < ApplicationController
-  before_action :set_container, only: [:show, :edit, :update, :destroy, :start, :stop]
+  before_action :set_container, only: [:show, :edit, :update, :destroy, :start, :stop, :logs]
   before_action :init_images, only: [:new, :edit]
 
   # GET /containers
@@ -86,6 +86,18 @@ class ContainersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to containers_url, notice: 'Container was successfully destroyed.' }
     end
+  end
+
+  def logs
+    container = Docker::Container.get(@container.cid)
+    @logs = container.streaming_logs(stdout: true).split("\n")
+
+    length = params[:limit].to_i
+    length = 100 if length <= 0
+    if length < @logs.size
+      @logs.slice!(0, @logs.size - length)
+    end
+
   end
 
   private

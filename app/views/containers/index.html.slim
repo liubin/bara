@@ -1,5 +1,9 @@
 h2 = t('container.list')
 
+.pull-right
+
+  = link_to t('container.action.deploy'), new_container_path, class: 'btn btn-success'
+
 table.table.table-striped style="table-layout:fixed; word-break:break-all;"
   thead
     tr
@@ -28,6 +32,8 @@ table.table.table-striped style="table-layout:fixed; word-break:break-all;"
         td
           - if container.json == 'running'
             = link_to t('container.action.stop'), stop_container_path(container), data: {:confirm => 'Are you sure?'}, :method => :POST, :class => 'btn btn-warning'
+            = link_to t('container.action.logs'), logs_container_path(container, limit: 50), :class => 'btn btn-success'
+
           -else
             = link_to t('container.action.start'), start_container_path(container), data: {:confirm => 'Are you sure?'}, :method => :POST, :class => 'btn btn-success'
             = link_to t('container.action.remove'), container, data: {:confirm => 'Are you sure?'}, :method => :delete, :class => 'btn btn-danger'

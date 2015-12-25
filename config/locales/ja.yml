@@ -93,5 +93,6 @@ ja:
       start: '起動'
       remove: '削除'
       deploy: 'コンテナをデプロイ'
+      logs: 'logs'
 
 

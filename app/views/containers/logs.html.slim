@@ -1,0 +1,10 @@
+- @logs.each do |log|
+  = log
+  br
+
+
+= content_for :page_script
+  javascript:
+    setTimeout(function (){
+      window.location.reload();
+    }, 5000);

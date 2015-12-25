@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     member do
       post 'start'
       post 'stop'
+      get 'logs'
     end
   end
 
