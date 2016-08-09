@@ -3,11 +3,11 @@
 Simply Docker base multi version app test environment.
 
 
-**It's only a reference implementation, strongly embedded in our process. **
+*It's only a reference implementation, strongly embedded in our process.*
 
 # How to run
 
-[简体中文版使用说明](http://liubin.org/2015/12/08/bara-nginx-and-dokcer-based-test-env-poc/)
+[简体中文版使用说明](http://liubin.org/2015/12/08/bara-nginx-and-dokcer-based-test-env-poc/)(旧Blog已不在)
 
 [日本語紹介](http://qiita.com/liubin/items/0090e2b16e5c3674b5b6)
 
